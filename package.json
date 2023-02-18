@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mongodb": "^5.0.1",
+    "react-icons": "^4.7.1"
+  }
+}

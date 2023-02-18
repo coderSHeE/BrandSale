@@ -1,11 +1,14 @@
-import Head from 'next/head'
+import Head from 'next/head';
+
+import {Form} from'../components/form';
 
 /*import {BiUserPlus} from 'react-icons'*/
 import { BiUserPlus } from "react-icons/bi";
 
+import Table from'../components/table';
 
 
-export default function Home() {
+export default function Home(){
   return (
 <section>
 <Head>
@@ -24,21 +27,23 @@ export default function Home() {
            </button>
          </div>
 
-      /*form */
+</div>
+
+{ /*form */}
+<div className='Container mx-auto py-5'>
+<form>
+
+</form>
+</div>
 
 
-      /* table */
+      {/* table */}
 
-          
+     <div className='container mx-auto'>
+      <Table>
 
-
-
-
-             
-      </div>
-
-
-
+      </Table>
+     </div>
 
 
 

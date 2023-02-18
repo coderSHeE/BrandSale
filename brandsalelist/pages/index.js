@@ -1,6 +1,8 @@
 import Head from 'next/head';
 
-import {Form} from'../components/form';
+import Form from '../components/form';
+
+import { useState } from 'react';
 
 /*import {BiUserPlus} from 'react-icons'*/
 import { BiUserPlus } from "react-icons/bi";
@@ -9,6 +11,11 @@ import Table from'../components/table';
 
 
 export default function Home(){
+     const [visible, setValue]=useState(false)
+
+     const handler =() =>{
+      setValue(visible?false :true )
+     }
   return (
 <section>
 <Head>
@@ -22,22 +29,20 @@ export default function Home(){
 
       <div className='container mx-auto flex justify-between py-5 border-b'>
          <div className='left flex gap-3.5'>
-           <button className='flex bg-red-300 text-black px-4 py-2 border rounded-md hover:bg-slate-500 '>
+           <button onClick={handler}className='flex bg-red-300 text-black px-4 py-2 border rounded-md hover:bg-slate-500 '>
              Add Row <span className='px-1'><BiUserPlus size={23}></BiUserPlus></span>
            </button>
          </div>
 
 </div>
 
-{ /*form */}
-<div className='Container mx-auto py-5'>
-<form>
-
-</form>
-</div>
 
 
-      {/* table */}
+{visible ? <Form></Form>:<></>}
+
+
+
+    
 
      <div className='container mx-auto'>
       <Table>
@@ -51,3 +56,4 @@ export default function Home(){
     </section>
   )
 }
+

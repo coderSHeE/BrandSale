@@ -2,10 +2,13 @@ import { Schema , models, model } from "mongoose";
 
 
 const userSchema = new Schema({
-    partname : String,
-    partnumber : String,
-    Quantity : Number,
-    Price: Number,
+   brand: String,
+   transactionType : String,
+   totalOrders : Number,
+   totalOrderValue:Number,
+   grossMarginPercentage: Number,
+   createdAt : String,
+   updatedAt :String  
 
 
 

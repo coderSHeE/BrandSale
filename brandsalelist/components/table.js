@@ -1,10 +1,16 @@
 import { BiEdit, BiTrashAlt } from "react-icons/bi";
-import data from '../database/data.json'
+import data from '../database/data.json';
 import {getUsers} from "../lib/helper";
+import { useQuery } from "react-query";
 
 export default function Table(){
 
-    getUsers().then(res => console.log(res))
+   //const {isLoading , isError , data, error} =useQuery('user', getUsers)
+
+  // if(isLoading) return <div>List is Loading</div>
+   //if(isError) return<div>Got Error {error}</div>
+  
+
     return (
         <table className="min-w-full table-auto">
             <thead>

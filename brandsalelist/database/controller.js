@@ -13,6 +13,8 @@ export async function getUsers(req ,res){
      }catch(error){
         res.status(404).json({error : "Error While Fetching Data"})
      }
+
+  
 }
 
 //post - http://localhost:3000/api/users

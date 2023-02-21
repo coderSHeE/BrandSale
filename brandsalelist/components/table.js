@@ -39,7 +39,8 @@ export default function Table(){
                 </tr>
             </thead>
             <tbody className="bg-gray-200">
-                    {
+                    {   
+                     
                         data.map((obj, i) => <Tr {...obj} key={i} />)
                     }
             </tbody>
@@ -47,7 +48,7 @@ export default function Table(){
     )
 }
 
-function Tr({id, brand , transition_type , total_order,total_value, gross_margin_percentage, created_date, updated_date}){
+function Tr({_id, brand ,transactionType , totalOrders,totalOrderValue, grossMarginPercentage, createdAt, updatedAt}){
   return (
       <tr className="bg-gray-50 text-center">
       <td className="px-3 py-2 flex flex-row items-center">
@@ -55,22 +56,22 @@ function Tr({id, brand , transition_type , total_order,total_value, gross_margin
           <span className="text-center ml-2 font-semibold">{brand || "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{transition_type || "Unknown"}</span>
+          <span>{transactionType || "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{total_order || "Unknown"}</span>
+          <span>{totalOrders || "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{total_value|| "Unknown"}</span>
+          <span>{totalOrderValue|| "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{gross_margin_percentage|| "Unknown"}</span>
+          <span>{grossMarginPercentage|| "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{created_date|| "Unknown"}</span>
+          <span>{createdAt|| "Unknown"}</span>
       </td>
       <td className="px-10 py-2">
-          <span>{updated_date|| "Unknown"}</span>
+          <span>{updatedAt|| "Unknown"}</span>
       </td>
     
       <td className="px-10 py-2 flex justify-around gap-5">

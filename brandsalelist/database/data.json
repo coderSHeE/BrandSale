@@ -1,6 +1,33 @@
-[
-    {
-        "id" : 
-        "partname" 
-    }
+[  {    "_id": "63cbbdccc046b63080f6f493",  
+  "brand": "Maruti", 
+    "transactionType": "Trading",   
+    "totalOrders": 13,  
+     "totalOrderValue": 12000,   
+    "grossMarginPercentage": 4,  
+    "createdAt": "2023-01-21T10:26:20.042+0000",   
+"updatedAt": "2023-01-21T10:26:20.042+0000" 
+
+},
+{
+    "_id": "63cbbdccc046b63080f6f493",  
+  "brand": "Maruti", 
+    "transactionType": "Trading",   
+    "totalOrders": 13,  
+     "totalOrderValue": 12000,   
+    "grossMarginPercentage": 4,  
+    "createdAt": "2023-01-21T10:26:20.042+0000",   
+"updatedAt": "2023-01-21T10:26:20.042+0000" 
+},
+{
+    "_id": "63cbbdccc046b63080f6f493",  
+    "brand": "Maruti", 
+      "transactionType": "Trading",   
+      "totalOrders": 13,  
+       "totalOrderValue": 12000,   
+      "grossMarginPercentage": 4,  
+      "createdAt": "2023-01-21T10:26:20.042+0000",   
+  "updatedAt": "2023-01-21T10:26:20.042+0000" 
+}
+
+
 ]

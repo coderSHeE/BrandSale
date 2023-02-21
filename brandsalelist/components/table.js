@@ -9,21 +9,32 @@ export default function Table(){
         <table className="min-w-full table-auto">
             <thead>
                 <tr className="bg-gray-800">
-                    <th className="px-16 py-2">
-                        <span className="text-gray-200">PartName</span>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Brand</span>
                     </th>
-                    <th className="px-16 py-2">
-                        <span className="text-gray-200">PartNumber</span>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Transition Type</span>
                     </th>
-                    <th className="px-16 py-2">
-                        <span className="text-gray-200">Quantity</span>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Total Order</span>
                     </th>
-                    <th className="px-16 py-2">
-                        <span className="text-gray-200">Price</span>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Total Order Value</span>
                     </th>
                     
-                    <th className="px-16 py-2">
-                        <span className="text-gray-200">Actions</span>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Gross Margin Percentage</span>
+                    </th>
+
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Created Date</span>
+                    </th>
+
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Updated Date</span>
+                    </th>
+                    <th className="px-3 py-2">
+                        <span className="text-gray-200">Action</span>
                     </th>
                 </tr>
             </thead>
@@ -36,27 +47,38 @@ export default function Table(){
     )
 }
 
-function Tr({id, partname, partnumber, quantity, price }){
+function Tr({id, brand , transition_type , total_order,total_value, gross_margin_percentage, created_date, updated_date}){
   return (
       <tr className="bg-gray-50 text-center">
-      <td className="px-16 py-2 flex flex-row items-center">
+      <td className="px-3 py-2 flex flex-row items-center">
         
-          <span className="text-center ml-2 font-semibold">{partname || "Unknown"}</span>
+          <span className="text-center ml-2 font-semibold">{brand || "Unknown"}</span>
       </td>
-      <td className="px-16 py-2">
-          <span>{partnumber || "Unknown"}</span>
+      <td className="px-10 py-2">
+          <span>{transition_type || "Unknown"}</span>
       </td>
-      <td className="px-16 py-2">
-          <span>{quantity || "Unknown"}</span>
+      <td className="px-10 py-2">
+          <span>{total_order || "Unknown"}</span>
       </td>
-      <td className="px-16 py-2">
-          <span>{price|| "Unknown"}</span>
+      <td className="px-10 py-2">
+          <span>{total_value|| "Unknown"}</span>
+      </td>
+      <td className="px-10 py-2">
+          <span>{gross_margin_percentage|| "Unknown"}</span>
+      </td>
+      <td className="px-10 py-2">
+          <span>{created_date|| "Unknown"}</span>
+      </td>
+      <td className="px-10 py-2">
+          <span>{updated_date|| "Unknown"}</span>
       </td>
     
-      <td className="px-16 py-2 flex justify-around gap-5">
+      <td className="px-10 py-2 flex justify-around gap-5">
+           
           <button className="cursor"><BiEdit size={25} color={"rgb(34,197,94)"}></BiEdit></button>
           <button className="cursor"><BiTrashAlt size={25} color={"rgb(244,63,94)"}></BiTrashAlt></button>
       </td>
   </tr>
   )
 }
+
